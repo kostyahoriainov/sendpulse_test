@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" ng-app="testApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Test task</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./app.css" />
+    <script src="./lib/angular/angular.js"></script>
+    <script src="./lib/angular-resource/angular-resource.js"></script>
+    <script src="./lib/angular-route/angular-route.js"></script>
+    <script src="./lib/angular-translate/dist/angular-translate.js"></script>
+    <script src="./app.module.js"></script>
+    <script src="./app.config.js"></script>
+    <script src="./core/core.module.js"></script>
+    <script src="./core/user/user.module.js"></script>
+    <script src="./core/user/user.service.js"></script>
+    <script src="./components/home/home.module.js"></script>
+    <script src="./components/home/home.component.js"></script>
+    <script src="./components/about-us/about-us.module.js"></script>
+    <script src="./components/about-us/about-us.component.js"></script>
+    <script src="./components/not-found/not-found.module.js"></script>
+    <script src="./components/not-found/not-found.component.js"></script>
+    <script src="./components/user-list/user-list.module.js"></script>
+    <script src="./components/user-list/user-list.component.js"></script>
+    <script src="./components/user-details/user-details.module.js"></script>
+    <script src="./components/user-details/user-datails.component.js"></script>
+    <script src="./components/add-user/add-user.module.js"></script>
+    <script src="./components/add-user/add-user.component.js"></script>
+    <script src="./components/foot/foot.module.js"></script>
+    <script src="./components/foot/foot.component.js"></script>
+  </head>
+  <body>
+
+  <div class="container">
+      <header class="top-header">
+          <div class="logo"><img class="fluid-img"  ng-src="/i/logo.svg" alt="logo" ></div>
+          <ul class="main-nav">
+              <li><a href="#!/home/" translate>NAV.HOME</a></li>
+              <li><a href="#!/user/" translate>NAV.USERS</a></li>
+              <li><a href="#!/aboutUs/" translate>NAV.ABOUT_US</a></li>
+          </ul>
+      </header>
+
+      <div ng-view></div>
+
+      <foot></foot>
+
+  </div>    
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<div ng-if="!$ctrl.isAdd">
+    <button ng-click="$ctrl.openForm()" translate>USERS.ADD_NEW</button>
+</div>
+<div ng-if="$ctrl.isAdd">
+    <form ng-submit="$ctrl.addUser($event)">
+        <p>
+            <label for="name">Your full name: </label>
+            <input type="text" name="name" id="name">
+            <span ng-bind="$ctrl.errors.name"></span>
+        </p>
+        <p>
+            <label for="username">Your username: </label>
+            <input type="text" name="username" id="username">
+            <span ng-bind="$ctrl.errors.username"></span>
+        </p>
+        <p>
+            <label for="email">Your email: </label>
+            <input type="text" name="email" id="email">
+            <span ng-bind="$ctrl.errors.email"></span>
+        </p>
+        <p>
+            <label for="phone">Your phone: </label>
+            <input type="text" name="phone" id="phone">
+            <span ng-bind="$ctrl.errors.phone"></span>
+        </p>
+        <p>
+            <label for="website">Your website: </label>
+            <input type="text" name="website" id="website">
+            <span ng-bind="$ctrl.errors.website"></span>
+        </p>
+        <p>
+            <label for="company">Your company: </label>
+            <input type="text" name="company" id="company">
+            <span ng-bind="$ctrl.errors.company"></span>
+        </p>
+        <button translate>USERS.ADD</button>
+    </form>
+</div>

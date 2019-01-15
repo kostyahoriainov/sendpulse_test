@@ -1,0 +1,22 @@
+<div ng-cloak ng-if="!$ctrl.isEditing">
+    <h3 ><span translate>USER_INFO.FULL_NAME</span>: <span>{{$ctrl.user.name}}</span></h3>
+    <h4 translate>USER_INFO.INFO</h4> 
+    <ul>
+        <li> <span translate>USER_INFO.USERNAME</span>: <span>{{$ctrl.user.username}}</span></li>
+        <li> <span translate>USER_INFO.EMAIL</span>: <span>{{$ctrl.user.email}}</span></li>
+        <li> <span translate>USER_INFO.PHONE</span>: <span>{{$ctrl.user.phone}}</span></li>
+        <li> <span translate>USER_INFO.WEBSITE</span>: <span>{{$ctrl.user.website}}</span></li>
+        <li> <span translate>USER_INFO.COMPANY</span>: <span>{{$ctrl.user.company.name}}</span></li>
+    </ul>
+
+    <button ng-click="$ctrl.editUser()" translate>USERS.EDIT</button>
+</div>
+<div ng-if="$ctrl.isEditing">
+    <input type="text" name="name" ng-model="$ctrl.editingUser.name">
+    <input type="text" name="username" ng-model="$ctrl.editingUser.username">
+    <input type="text" name="email" ng-model="$ctrl.editingUser.email">
+    <input type="text" name="phone" ng-model="$ctrl.editingUser.phone">
+    <input type="text" name="website" ng-model="$ctrl.editingUser.website">
+    <input type="text" name="company" ng-model="$ctrl.editingUser.company.name">
+    <button ng-click="$ctrl.updateUser()" translate>USERS.SAVE</button>
+</div> 

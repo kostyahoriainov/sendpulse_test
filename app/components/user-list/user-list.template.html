@@ -1,0 +1,8 @@
+<ul class="main-content">
+    <li ng-repeat="user in $ctrl.userList">
+        {{user.id}}
+        <a href="#!/user/{{user.id}}">{{user.name}}</a> <button ng-click="$ctrl.removeUser(user.id)" translate>USERS.DELETE</button>
+    </li>
+</ul>
+
+<add-user></add-user>
