@@ -25,7 +25,8 @@ angular
 
                 self.removeUser = function(userId) {
                     User.delete({userId}, function(response) {
-                        self.userList.splice(userId-1, 1)
+                        const newList = self.userList.filter(user => user.id !== userId)
+                        self.userList = newList
                     }, function (error) {
                         console.log(error.message)
                     })
